@@ -3,6 +3,7 @@
     --dark: #28292c;
     --pink: #cfafaf;
     --midgrey: #716975;
+    --header-height: 4rem;
 }
 
 /* * {
@@ -17,10 +18,16 @@ body {
 }
 
 header {
-    height: 4rem;
+    height: var(--header-height);
+    top: 0;
     position: fixed;
     width: 100vw;
     background: rgba(63, 61, 61, 0.466);
+}
+
+main {
+    margin-top: calc(var(--header-height) + 2rem);
+    height: 100vw;
 }
 
 /* Specific classes */
@@ -28,6 +35,20 @@ header {
 .linkedin-logo {
     height: 32px;
 }
+
+.main-top {
+    background-color: #e9ecf0;
+}
+
+.profile.img {
+    background-color: beige;
+}
+
+.profile-text {
+    background-color: bisque;
+}
+
+/* Toggle switch */
 
 .toggle-switch {
     position: relative;
@@ -107,6 +128,6 @@ input:checked~.slider::before {
 }
 
 .m1-sides {
-    margin: 0 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
-

@@ -1,0 +1,112 @@
+:root {
+    --light: #e9ecf0;
+    --dark: #28292c;
+    --pink: #cfafaf;
+    --midgrey: #716975;
+}
+
+/* * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  } */
+
+body {
+    background-color: var(--midgrey);
+    height: 300rem;
+}
+
+header {
+    height: 4rem;
+    position: fixed;
+    width: 100vw;
+    background: rgba(63, 61, 61, 0.466);
+}
+
+/* Specific classes */
+
+.linkedin-logo {
+    height: 32px;
+}
+
+.toggle-switch {
+    position: relative;
+    width: 100px;
+}
+
+label {
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    background-color: var(--dark);
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+input {
+    position: absolute;
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+input:checked~.slider {
+    background-color: var(--light);
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 12px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    box-shadow: inset 14px -4px 0px 0px var(--light);
+    background-color: var(--dark);
+    transition: 0.3s;
+}
+
+input:checked~.slider::before {
+    transform: translateX(47.5px);
+    background-color: var(--dark);
+    box-shadow: none;
+}
+
+/* Reusable classes */
+
+.m0 {
+    margin: 0;
+}
+
+.p0 {
+    padding: 0;
+}
+
+.flex {
+    display: flex;
+}
+
+.justify-items {
+    justify-content: center;
+    align-items: center;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.spread {
+    justify-content: space-between;
+}
+
+.m1-sides {
+    margin: 0 1rem;
+}
+

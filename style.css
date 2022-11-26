@@ -17,6 +17,7 @@ header {
     position: fixed;
     width: 100vw;
     background: rgba(63, 61, 61, 0.466);
+    justify-content: space-between;
 }
 
 main {
@@ -24,14 +25,15 @@ main {
 }
 
 fieldset {
-    position: relative;
     border: 1px solid transparent;
-    border-top-color: white;
+    border-top-color: var(--light);
+    overflow: hidden;
+    width:100%;
 }
 
 legend {
     padding: 0 10px;
-    margin-left: 20rem;
+    /* margin-left: 20rem; */
 }
 
 /* Specific classes */
@@ -40,24 +42,22 @@ legend {
     height: 32px;
 }
 
-/* .main-top {
-    background-color: #e9ecf0;
-} */
-
-/* .profile-img {
-    background-color: beige;
-} */
-
 .profile-pic {
     height: 150px;
     width: 150px;
     object-fit: cover;
     transform: scaleX(-1);
-
+    margin-top: 1rem;
+    
 }
 
 .profile-text {
-    /* background-color: bisque; */
+    text-align: right;
+    
+}
+
+h1 {
+    font-size: 25px;
 }
 
 /* Toggle switch */
@@ -126,9 +126,12 @@ input:checked~.slider::before {
     display: flex;
 }
 
-.justify-items {
-    justify-content: center;
+.center-items {
     align-items: center;
+}
+
+.center-content {
+    justify-content: center;
 }
 
 .column {
@@ -145,7 +148,33 @@ input:checked~.slider::before {
 }
 
 .round {
-    border: 1px solid white;
+    border-right: 3px solid var(--light);
+    border-bottom: 2px solid var(--light);
     border-radius: 50%;
 }
 
+/* Tablet */
+
+@media (min-width: 768px) {
+    body {
+        background: var(--light);
+    }
+    .spread {
+        justify-content: space-evenly;
+    }
+    .main-mid {
+        flex-direction: row;
+    }
+}
+
+/* Desktop */
+
+@media (min-width: 1024px) {
+    body {
+        background: var(--pink);
+    }
+
+    .spread {
+        justify-content: space-evenly;
+    }
+}

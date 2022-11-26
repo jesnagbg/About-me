@@ -23,25 +23,30 @@ main {
     margin-top: calc(var(--header-height) + 1rem);
 }
 
+fieldset {
+    position: relative;
+    border: 1px solid transparent;
+    border-top-color: white;
+}
+
+legend {
+    padding: 0 10px;
+    margin-left: 20rem;
+}
+
 /* Specific classes */
 
 .linkedin-logo {
     height: 32px;
 }
 
-.main-top {
-    /* background-color: #e9ecf0; */
-}
-
-/* .frame {
-    box-shadow: 0 3px 6px rgba(0,0,0,0.4);
-    color: white;
-	padding: 2rem;
+/* .main-top {
+    background-color: #e9ecf0;
 } */
 
-.profile-img {
-    /* background-color: beige; */
-}
+/* .profile-img {
+    background-color: beige;
+} */
 
 .profile-pic {
     height: 150px;
@@ -140,5 +145,7 @@ input:checked~.slider::before {
 }
 
 .round {
+    border: 1px solid white;
     border-radius: 50%;
 }
+

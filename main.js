@@ -22,9 +22,9 @@ function toggleLightMode() {
 function displayCorrectImage() {
  
     if (document.getElementById('checkbox').checked) {
-        document.getElementById("profile-pic").src=".../assets/drawingme.png";
+        document.getElementById("profile-pic").src="assets/drawingme.png";
     } else {
-        document.getElementById("profile-pic").src=".../assets/drawingmesleep.png";
+        document.getElementById("profile-pic").src="assets/drawingmesleep.png";
     }
 }
 

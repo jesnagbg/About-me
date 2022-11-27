@@ -128,12 +128,6 @@ main {
     margin-top: 1rem;
 }
 
-/* .round {
-    border-right: 3px solid var(--light);
-    border-bottom: 2px solid var(--light);
-    border-radius: 50%;
-} */
-
 fieldset {
     border: 1px solid transparent;
     border-top-color: var(--lightgrey);

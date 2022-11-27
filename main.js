@@ -20,9 +20,7 @@ function toggleLightMode() {
 }
 
 function displayCorrectImage() {
-    const imgEyesOpen = document.getElementById("profile-pic").src="assets/drawingme.png";
-    const imgEyesClosed = document.getElementById("profile-pic").src="assets/drawingmesleep.png";
-
+ 
     if (document.getElementById('checkbox').checked) {
         document.getElementById("profile-pic").src="assets/drawingme.png";
     } else {

@@ -37,11 +37,11 @@ a {
 
 header {
     height: var(--header-height);
+    justify-content: flex-end;
     top: 0;
     position: fixed;
     width: 100vw;
     background: rgba(63, 61, 61, 0.466);
-    justify-content: space-between;
     backdrop-filter: blur(10px);
     z-index: 2;
 }

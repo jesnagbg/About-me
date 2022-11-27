@@ -5,27 +5,25 @@ function main() {
 }
 
 function addEventListeners() {
-    toggleLightMode();
+    listenCheckbox();
 
 }
 
-function toggleLightMode() {
+function listenCheckbox() {
     const checkbox = document.getElementById('checkbox');
-    const body = document.querySelector('body');
-
-    checkbox.addEventListener('change', function() {
-        body.classList.toggle('dark');
-        displayCorrectImage();
-    });
+    checkbox.addEventListener('change', toggleTheme);
 }
 
-function displayCorrectImage() {
- 
-    if (document.getElementById('checkbox').checked) {
-        document.getElementById("profile-pic").src="assets/drawingme.png";
+function toggleTheme(event) {
+    const body = document.querySelector('body');
+    const profilePic = document.getElementById("profile-pic");
+
+    if (event.target.checked) {
+        body?.classList.remove('dark');
+        profilePic.src = "assets/drawingme.png";
     } else {
-        document.getElementById("profile-pic").src="assets/drawingmesleep.png";
+        body.classList.add('dark');
+        profilePic.src = "assets/drawingmesleep.png";
     }
 }
-
 

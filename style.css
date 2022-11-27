@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@600&display=swap');
+
 :root {
     --light: #e9ecf0;
     --dark: #28292c;
@@ -9,7 +11,11 @@
 body {
     background-color: var(--midgrey);
     height: 300rem;
+    font-family: 'Crimson Text', serif;
+    font-size: 16px;
 }
+
+/* Header */
 
 header {
     height: var(--header-height);
@@ -20,44 +26,8 @@ header {
     justify-content: space-between;
 }
 
-main {
-    margin-top: calc(var(--header-height) + 1rem);
-}
-
-fieldset {
-    border: 1px solid transparent;
-    border-top-color: var(--light);
-    overflow: hidden;
-    width:100%;
-}
-
-legend {
-    padding: 0 10px;
-    /* margin-left: 20rem; */
-}
-
-/* Specific classes */
-
 .linkedin-logo {
     height: 32px;
-}
-
-.profile-pic {
-    height: 150px;
-    width: 150px;
-    object-fit: cover;
-    transform: scaleX(-1);
-    margin-top: 1rem;
-    
-}
-
-.profile-text {
-    text-align: right;
-    
-}
-
-h1 {
-    font-size: 25px;
 }
 
 /* Toggle switch */
@@ -112,6 +82,62 @@ input:checked~.slider::before {
     box-shadow: none;
 }
 
+/* Main */
+
+main {
+    margin-top: calc(var(--header-height) + 1rem);
+}
+
+/* Top Main */
+
+/* Containers for flex order */
+
+.profile-img {
+    order: 1;
+
+}
+
+.profile-text {
+    text-align: right;
+    order: 2;    
+}
+
+/* Top Main styling */
+
+.profile-pic {
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    transform: scaleX(-1);
+    margin-top: 1rem;
+}
+
+fieldset {
+    border: 1px solid transparent;
+    border-top-color: var(--light);
+    overflow: hidden;
+    width:100%;
+}
+
+legend {
+    padding: 0 10px;
+    /* margin-left: 20rem; */
+}
+
+.small-shown {
+    display: block;
+}
+
+.big-shown {
+    display: none;
+}
+
+
+h1 {
+    font-size: 25px;
+}
+
+
 /* Reusable classes */
 
 .m0 {
@@ -156,11 +182,18 @@ input:checked~.slider::before {
 /* Tablet */
 
 @media (min-width: 768px) {
+
     body {
         background: var(--light);
+        font-size: 18px;
     }
     .spread {
         justify-content: space-evenly;
+    }
+    .main-top {
+        margin-top: calc(var(--header-height) + 3rem);
+        margin-left: 5rem;
+        margin-right: 5rem;
     }
     .main-mid {
         flex-direction: row;
@@ -170,11 +203,39 @@ input:checked~.slider::before {
 /* Desktop */
 
 @media (min-width: 1024px) {
+
     body {
         background: var(--pink);
+        font-size: 20px;
+    }
+
+    .profile-img {
+        order: 3;
+    
+    }
+    
+    .profile-text {
+        text-align: left;
+        order: 2;    
+    }
+
+    .profile-pic {
+        height: 300px;
+        width: 300px;
+        object-fit: cover;
+        transform: scaleX(+1);
+        margin-top: 1rem;
+    }
+
+    .small-shown {
+        display: none;
+    }
+    
+    .big-shown {
+        display: block;
     }
 
     .spread {
-        justify-content: space-evenly;
+        justify-content: center;
     }
 }

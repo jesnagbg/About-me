@@ -2,9 +2,10 @@
 
 :root {
     --light: #e9ecf0;
-    --dark: #28292c;
+    --dark: #33333d;
     --pink: #cfafaf;
-    --midgrey: #716975;
+    --midgrey: #656577;
+    --lightgrey: #5b5c62;
     --header-height: 4rem;
 }
 
@@ -13,6 +14,7 @@ body {
     height: 300rem;
     font-family: 'Crimson Text', serif;
     font-size: 16px;
+    color: var(--light);
 }
 
 /* Header */
@@ -137,6 +139,16 @@ h1 {
     font-size: 25px;
 }
 
+/* Main Mid */
+
+/* .main-mid {
+    flex-direction: column;
+} */
+
+/* Containers for flex order */
+
+
+
 
 /* Reusable classes */
 
@@ -184,7 +196,7 @@ h1 {
 @media (min-width: 768px) {
 
     body {
-        background: var(--light);
+        background: var(--midgrey);
         font-size: 18px;
     }
     .spread {
@@ -195,30 +207,27 @@ h1 {
         margin-left: 5rem;
         margin-right: 5rem;
     }
-    .main-mid {
-        flex-direction: row;
-    }
 }
 
 /* Desktop */
 
 @media (min-width: 1024px) {
-
+    
     body {
-        background: var(--pink);
+        background: var(--midgrey);
         font-size: 20px;
     }
-
+    
     .profile-img {
         order: 3;
-    
+        
     }
     
     .profile-text {
         text-align: left;
         order: 2;    
     }
-
+    
     .profile-pic {
         height: 300px;
         width: 300px;
@@ -226,13 +235,27 @@ h1 {
         transform: scaleX(+1);
         margin-top: 1rem;
     }
-
+    
     .small-shown {
         display: none;
     }
     
     .big-shown {
         display: block;
+    }
+    
+    .main-mid {
+        flex-direction: row;
+        margin-left: 5rem;
+        margin-right: 5rem;
+    }
+
+    .my-skills {
+        flex-grow: 7;
+    }
+
+    .about-me {
+        flex-grow: 1;
     }
 
     .spread {

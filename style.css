@@ -42,7 +42,7 @@ header {
     width: 100vw;
     background: rgba(63, 61, 61, 0.466);
     justify-content: space-between;
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(10px);
     z-index: 2;
 }
 
@@ -113,12 +113,12 @@ main {
 /* Containers for flex order */
 
 .profile-img {
-    order: 1;    
+    order: 1;
 }
 
 .profile-text {
     text-align: right;
-    order: 2;    
+    order: 2;
 }
 
 /* Top Main styling */
@@ -134,7 +134,7 @@ fieldset {
     border: 1px solid transparent;
     border-top-color: var(--lightgrey);
     overflow: hidden;
-    width:100%;
+    width: 100%;
 }
 
 legend {
@@ -172,8 +172,9 @@ h1 {
     margin-bottom: 0;
 }
 
-li {
+.list-items {
     list-style-type: none;
+    white-space: nowrap;
 }
 
 .down-button {
@@ -185,18 +186,46 @@ li {
     color: inherit;
     cursor: pointer;
     /* transition: all; */
-    
+
 }
 
 .down-button:hover {
     border: 1px solid var(--lightgrey);
 }
 
+
+.html-pad {
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.css-pad {
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.js-pad {
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.ux-pad {
+    padding-left: 1px;
+    padding-right: 1px;
+
+}
+
+.coffee-pad {
+    padding-left: 2px;
+    padding-right: 2px;
+
+}
+
 /* Bouncy i */
 
 .letter {
-    text-align : center;
-    line-height: 0.1;
+    text-align: center;
+    line-height: 0;
 }
 
 .bounce {
@@ -257,14 +286,16 @@ li {
 
 /* Tablet */
 
-@media (min-width: 500px) {
+@media (min-width: 760px) {
 
     body {
         font-size: 18px;
     }
+
     .spread {
         justify-content: space-evenly;
     }
+
     .main-top {
         margin-top: var(--header-height);
         margin-left: 5rem;
@@ -288,11 +319,11 @@ li {
 /* Desktop */
 
 @media (min-width: 1024px) {
-    
+
     body {
         font-size: 20px;
     }
-    
+
     /* Header */
 
     .header-icons {
@@ -306,22 +337,25 @@ li {
     /* Main Top */
 
     .profile-img {
-        order: 3;        
-    }    
+        order: 3;
+    }
+
     .profile-text {
         text-align: left;
-        order: 2;    
-    }    
+        order: 2;
+    }
+
     .profile-pic {
         height: 600px;
         object-fit: cover;
         transform: scaleX(+1);
         margin-top: 1rem;
-    }    
+    }
+
     .small-shown {
         display: none;
     }
-    
+
     .big-shown {
         display: block;
     }
@@ -329,7 +363,7 @@ li {
     .main-top {
         margin-top: calc(var(--header-height) + 1rem);
     }
-    
+
     .main-mid {
         margin-left: 5rem;
         margin-right: 5rem;
@@ -350,7 +384,15 @@ li {
     .spread {
         justify-content: center;
     }
+
+    .js-pad {
+        padding-left: 3.5px;
+        padding-right: 3.5px;
+    }
+
+    .coffee-pad {
+        padding-left: 2.5px;
+        padding-right: 2.5px;
+
+    }
 }
-
-
-

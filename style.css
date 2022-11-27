@@ -14,16 +14,22 @@ body {
     height: 300rem;
     font-family: 'Crimson Text', serif;
     font-size: 16px;
-}
-
-.light {
     background-color: var(--extralight);
     color: var(--dark);
 }
 
+/* .light {
+    background-color: var(--extralight);
+    color: var(--dark);
+} */
+
 .dark {
     background-color: var(--midgrey);
     color: var(--light);
+}
+
+a {
+    color: inherit;
 }
 
 /* Header */
@@ -37,7 +43,7 @@ header {
     justify-content: space-between;
 }
 
-.linkedin-logo {
+.linked-logo {
     font-size: 35px;
 }
 

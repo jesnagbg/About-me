@@ -195,7 +195,7 @@ li {
 
 .letter {
     text-align : center;
-    line-height: 0;
+    line-height: 0.1;
 }
 
 .bounce {
@@ -256,7 +256,7 @@ li {
 
 /* Tablet */
 
-@media (min-width: 720px) {
+@media (min-width: 500px) {
 
     body {
         font-size: 18px;
@@ -277,6 +277,10 @@ li {
 
     .skill-list {
         flex-direction: row;
+    }
+
+    .letter {
+        line-height: 0.05;
     }
 }
 
@@ -336,6 +340,10 @@ li {
 
     .about-me {
         flex-grow: 1;
+    }
+
+    .letter {
+        line-height: 0.02;
     }
 
     .spread {

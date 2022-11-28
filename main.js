@@ -2,6 +2,7 @@ window.addEventListener('DOMContentLoaded', main);
 
 function main() {
     addEventListeners();
+    typeOutAboutMe();
 }
 
 function addEventListeners() {
@@ -27,3 +28,21 @@ function toggleTheme(event) {
     }
 }
 
+function typeOutAboutMe() {
+    let i = O;
+    const text = "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque saepe vel odio veniam, assumenda!";
+    const speed = 50;
+
+    if (i < text.length) {
+        document.getElementById('about-me').innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeOutAboutMe, speed);
+    }
+    
+}
+
+//function scrollToSkills() {
+//    const skillsButton = document.getElementById('scroll-to-skills');
+//
+//    skillsButton.addEventListener('click', )
+//}

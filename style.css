@@ -278,7 +278,6 @@ h1 {
     margin-bottom: 16px;
 }
 
-
 .p0 {
     padding: 0;
 }
@@ -302,6 +301,10 @@ h1 {
 .m1-sides {
     margin-left: 1rem;
     margin-right: 1rem;
+}
+
+.m1-bot {
+    margin-bottom: 1rem;
 }
 
 
@@ -433,3 +436,6 @@ h1 {
 
     }
 }
+
+
+

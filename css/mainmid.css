@@ -1,0 +1,133 @@
+/* Main Mid */
+
+/* .main-mid {
+    margin-top: var(--header-height);
+    margin-bottom: var(--header-height);
+} */
+
+/* Containers for flex order */
+
+.skill-list {
+    flex-direction: column;
+}
+
+.ul-m {
+    margin-top: 16px;
+    margin-bottom: 0;
+}
+
+.list-items {
+    list-style-type: none;
+    white-space: nowrap;
+}
+
+.down-button {
+    border: 1px transparent;
+    background: inherit;
+    padding: 0.5rem 6rem;
+    border-radius: 1.5rem;
+    box-sizing: border-box;
+    color: inherit;
+    cursor: pointer;
+    /* transition: all; */
+
+}
+
+.down-button:hover {
+    border: 1px solid var(--lightgrey);
+}
+
+
+.html-pad {
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.css-pad {
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.js-pad {
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.ux-pad {
+    padding-left: 1px;
+    padding-right: 1px;
+
+}
+
+.coffee-pad {
+    padding-left: 2px;
+    padding-right: 2px;
+
+}
+
+/* Bouncy i */
+
+.letter {
+    text-align: center;
+    line-height: 0;
+}
+
+.bounce {
+    animation: bounce 0.4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes bounce {
+    from {
+        transform: translate3d(0, -13px, 0);
+    }
+
+    to {
+        transform: translate3d(0, -20px, 0);
+    }
+}
+
+/* Tablet */
+
+@media (min-width: 650px) {
+    .skill-list {
+        flex-direction: row;
+    }
+    
+    .letter {
+        line-height: 0.05;
+    }
+}
+
+/* Desktop */
+
+@media (min-width: 1024px) {
+    .main-mid {
+        margin-left: 5rem;
+        margin-right: 5rem;
+    }
+    
+    .my-skills {
+        flex-grow: 7;
+    }
+    
+    .about-me {
+        flex-grow: 1;
+    }
+    
+    .letter {
+        line-height: 0.02;
+    }
+
+    .js-pad {
+        padding-left: 3.5px;
+        padding-right: 3.5px;
+    }
+
+    .coffee-pad {
+        padding-left: 2.5px;
+        padding-right: 2.5px;
+
+    }
+}

@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@600&display=swap');
+
+:root {
+    --light: #e9ecf0;
+    --extralight: #f0f3f7;
+    --dark: #33333d;
+    --pink: #cfafaf;
+    --midgrey: #656577;
+    --lightgrey: #5b5c62;
+    --header-height: 4rem;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    height: 300rem;
+    font-family: 'Crimson Text', serif;
+    font-size: 16px;
+    background: var(--extralight);
+    color: var(--dark);
+    transition: background 0.2s linear;
+}
+
+/* .light {
+    background-color: var(--extralight);
+    color: var(--dark);
+} */
+
+.dark {
+    background-color: var(--midgrey);
+    color: var(--light);
+}
+
+a {
+    color: inherit;
+}
+
+/* Main */
+
+main {
+    margin-top: calc(var(--header-height) + 1rem);
+}
+
+/* Reusable classes */
+
+.m0 {
+    margin: 0;
+}
+
+.m16-bot {
+    margin-bottom: 16px;
+}
+
+.p0 {
+    padding: 0;
+}
+
+.flex {
+    display: flex;
+}
+
+.center-items {
+    align-items: center;
+}
+
+.center-content {
+    justify-content: center;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.m1-sides {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.m1-bot {
+    margin-bottom: 1rem;
+}
+
+
+/* Tablet */
+
+@media (min-width: 650px) {
+    
+    body {
+        font-size: 18px;
+    }
+    
+    .spread {
+        justify-content: space-evenly;
+    }    
+         
+}
+
+/* Desktop */
+
+@media (min-width: 1024px) {
+    
+    body {
+        font-size: 20px;
+    }    
+  
+    .spread {
+        justify-content: center;
+    }
+
+    
+}
+
+
+

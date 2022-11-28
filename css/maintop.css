@@ -1,0 +1,99 @@
+/* Top Main */
+
+/* Containers for flex order */
+
+.profile-img {
+    order: 1;
+}
+
+.profile-text {
+    text-align: right;
+    order: 2;
+}
+
+/* Top Main styling */
+
+.profile-pic {
+    height: 150px;
+    object-fit: cover;
+    transform: scaleX(-1);
+    margin-top: 1rem;
+}
+
+fieldset {
+    border: 1px solid transparent;
+    border-top-color: var(--lightgrey);
+    overflow: hidden;
+    width: 100%;
+}
+
+legend {
+    padding: 0 10px;
+    margin-left: 2vw;
+}
+
+.small-shown {
+    display: block;
+}
+
+.big-shown {
+    display: none;
+}
+
+
+h1 {
+    font-size: 25px;
+}
+
+/* Tablet */
+
+@media (min-width: 650px) {
+    .main-top {
+        margin-top: var(--header-height);
+        margin-left: 5rem;
+        margin-right: 5rem;
+        /* margin-bottom: var(--header-height); */
+    }
+    
+    .profile-pic {
+        height: 300px;
+    }
+}
+
+/* Desktop */
+
+@media (min-width: 1024px) {
+    /* Main Top */
+    
+    legend {
+        margin-left: 60vw;
+    }
+    
+    .profile-img {
+        order: 3;
+    }
+    
+    .profile-text {
+        text-align: left;
+        order: 2;
+    }
+    
+    .profile-pic {
+        height: 600px;
+        object-fit: cover;
+        transform: scaleX(+1);
+        margin-top: 1rem;
+    }
+    
+    .small-shown {
+        display: none;
+    }
+    
+    .big-shown {
+        display: block;
+    }
+    
+    .main-top {
+        margin-top: calc(var(--header-height) + 1rem);
+    }
+}

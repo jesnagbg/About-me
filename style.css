@@ -10,6 +10,10 @@
     --header-height: 4rem;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 body {
     height: 300rem;
     font-family: 'Crimson Text', serif;
@@ -139,7 +143,7 @@ fieldset {
 
 legend {
     padding: 0 10px;
-    /* margin-left: 20rem; */
+    margin-left: 2vw;
 }
 
 .small-shown {
@@ -158,7 +162,8 @@ h1 {
 /* Main Mid */
 
 /* .main-mid {
-    flex-direction: column;
+    margin-top: var(--header-height);
+    margin-bottom: var(--header-height);
 } */
 
 /* Containers for flex order */
@@ -244,6 +249,25 @@ h1 {
     }
 }
 
+/* Main Bot */
+
+.work-container1 {
+    /* margin-top: var(--header-height);
+    margin-bottom: var(--header-height); */
+    flex-direction: column;
+}
+
+.git-portfolio-img {
+    max-width: 100%;
+    /* width: 250px; */
+    object-fit: cover;
+    filter: grayscale(60%);
+}
+
+.git-portfolio-img:hover {
+    filter: grayscale(0);
+}
+
 /* Reusable classes */
 
 .m0 {
@@ -275,108 +299,121 @@ h1 {
     flex-direction: column;
 }
 
-.spread {
-    justify-content: space-between;
-}
-
 .m1-sides {
     margin-left: 1rem;
     margin-right: 1rem;
 }
 
+
+@media (min-width: 430px) {
+    .git-portfolio-img {
+        width: 345px;
+    }
+}
+
+
 /* Tablet */
 
-@media (min-width: 760px) {
-
+@media (min-width: 650px) {
+    
     body {
         font-size: 18px;
     }
-
+    
     .spread {
         justify-content: space-evenly;
     }
-
+    
     .main-top {
         margin-top: var(--header-height);
         margin-left: 5rem;
         margin-right: 5rem;
-        margin-bottom: var(--header-height);
+        /* margin-bottom: var(--header-height); */
     }
-
+    
     .profile-pic {
         height: 300px;
     }
-
+    
     .skill-list {
         flex-direction: row;
     }
-
+    
     .letter {
         line-height: 0.05;
     }
+
+    .work-container {
+        flex-direction: row;
+    }
+    
 }
 
 /* Desktop */
 
 @media (min-width: 1024px) {
-
+    
     body {
         font-size: 20px;
     }
-
+    
     /* Header */
-
+    
     .header-icons {
         margin-left: 3rem;
     }
-
+    
     .toggle-switch {
         margin-right: 3rem;
     }
-
+    
     /* Main Top */
-
+    
+    legend {
+        margin-left: 60vw;
+    }
+    
     .profile-img {
         order: 3;
     }
-
+    
     .profile-text {
         text-align: left;
         order: 2;
     }
-
+    
     .profile-pic {
         height: 600px;
         object-fit: cover;
         transform: scaleX(+1);
         margin-top: 1rem;
     }
-
+    
     .small-shown {
         display: none;
     }
-
+    
     .big-shown {
         display: block;
     }
-
+    
     .main-top {
         margin-top: calc(var(--header-height) + 1rem);
     }
-
+    
     .main-mid {
         margin-left: 5rem;
         margin-right: 5rem;
     }
-
+    
     .my-skills {
         flex-grow: 7;
     }
-
+    
     .about-me {
         flex-grow: 1;
     }
-
+    
     .letter {
         line-height: 0.02;
     }

@@ -1,6 +1,10 @@
 /* Main Bot */
 
-.work-container1 {
+.all-work-container {
+    flex-direction: column;
+}
+
+.work-container {
     /* margin-top: var(--header-height);
     margin-bottom: var(--header-height); */
     flex-direction: column;
@@ -18,9 +22,16 @@
 }
 
 @media (min-width: 430px) {
+
+    .main-bot {
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+
     .git-portfolio-img {
         width: 345px;
     }
+
 }
 
 /* Tablet */
@@ -34,5 +45,15 @@
 /* Desktop */
 
 @media (min-width: 1024px) {
+
     
+    
+}
+
+/* Large desktop */
+
+@media (min-width: 1600px) {
+    .all-work-container {
+        flex-direction: row;
+    }
 }

@@ -21,23 +21,6 @@
     white-space: nowrap;
 }
 
-.down-button {
-    border: 1px transparent;
-    background: inherit;
-    padding: 0.5rem 6rem;
-    border-radius: 1.5rem;
-    box-sizing: border-box;
-    color: inherit;
-    cursor: pointer;
-    /* transition: all; */
-
-}
-
-.down-button:hover {
-    border: 1px solid var(--lightgrey);
-}
-
-
 .html-pad {
     padding-left: 4px;
     padding-right: 4px;
@@ -63,6 +46,10 @@
     padding-left: 2px;
     padding-right: 2px;
 
+}
+
+.about-me {
+    padding: 0.1rem 2rem;
 }
 
 /* Bouncy i */
@@ -91,6 +78,12 @@
 /* Tablet */
 
 @media (min-width: 650px) {
+
+    .main-mid {
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+    
     .skill-list {
         flex-direction: row;
     }
@@ -98,22 +91,33 @@
     .letter {
         line-height: 0.05;
     }
+
+    .about-me {
+        padding: 0.1rem 2rem;
+    }
 }
 
 /* Desktop */
 
 @media (min-width: 1024px) {
+
     .main-mid {
+        margin-top: 4rem;
         margin-left: 5rem;
         margin-right: 5rem;
     }
     
-    .my-skills {
+    /* .my-skills {
         flex-grow: 7;
     }
     
     .about-me {
         flex-grow: 1;
+    } */
+
+    .about-me {
+        margin: 1rem;
+        padding: 0.1rem 2rem;
     }
     
     .letter {
@@ -129,5 +133,13 @@
         padding-left: 2.5px;
         padding-right: 2.5px;
 
+    }
+}
+
+@media (min-width: 1600px) {
+    .about-me {
+        max-width: 1500px;
+        margin: 1rem;
+        padding: 0.1rem 2rem;
     }
 }

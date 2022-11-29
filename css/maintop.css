@@ -30,6 +30,7 @@ fieldset {
 legend {
     padding: 0 10px;
     margin-left: 2vw;
+    white-space: nowrap
 }
 
 .small-shown {
@@ -45,6 +46,22 @@ h1 {
     font-size: 25px;
 }
 
+.down-button {
+    border: 1px transparent;
+    background: inherit;
+    padding: 0.5rem 6rem;
+    border-radius: 1.5rem;
+    box-sizing: border-box;
+    color: inherit;
+    cursor: pointer;
+    /* transition: all; */
+
+}
+
+.down-button:hover {
+    border: 1px solid var(--lightgrey);
+}
+
 /* Tablet */
 
 @media (min-width: 650px) {
@@ -52,7 +69,7 @@ h1 {
         margin-top: var(--header-height);
         margin-left: 5rem;
         margin-right: 5rem;
-        /* margin-bottom: var(--header-height); */
+        margin-bottom: var(--header-height);
     }
     
     .profile-pic {
@@ -64,6 +81,11 @@ h1 {
 
 @media (min-width: 1024px) {
     /* Main Top */
+    
+    .main-top {
+        margin-top: calc(var(--header-height) + 1rem);
+        margin-bottom: calc(var(--header-height) + 2rem);
+    }
     
     legend {
         margin-left: 60vw;
@@ -93,7 +115,4 @@ h1 {
         display: block;
     }
     
-    .main-top {
-        margin-top: calc(var(--header-height) + 1rem);
-    }
 }

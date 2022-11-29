@@ -1,7 +1,8 @@
 /* Main Bot */
 
 .all-work-container {
-    flex-direction: column;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
 }
 
 .work-container {
@@ -52,8 +53,8 @@
 
 /* Large desktop */
 
-@media (min-width: 1600px) {
+/* @media (min-width: 1600px) {
     .all-work-container {
         flex-direction: row;
     }
-}
+} */

@@ -32,18 +32,20 @@ function toggleTheme(event) {
     }
 }
 
-function listenPageButton() {
-    const button = document.getElementById('scroll-to-skills');
 
-    //button.addEventListener('click', changeButtonDirection);
+//Stupid button fix
+
+function listenPageButton() {
+    const button = document.getElementById('scroll-down');
+
     button.onclick = changeButtonDirection;
 }
 
-function changeButtonDirection() {  
+function changeButtonDirection() {
     const buttonIcon = document.getElementById('button-icon');
     const buttonLink = document.getElementById('scroll-down');
     let buttonHref = buttonLink.getAttribute("href");
-    
+
     if (buttonHref === "#skills") {
         buttonLink.setAttribute('href', '#top-page');
         removeClasses();

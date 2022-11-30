@@ -54,7 +54,7 @@ input:checked~.slider {
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    box-shadow: inset 14px -4px 0px 0px var(--light);
+    box-shadow: inset 12px -6px 0px 0px var(--light);
     background-color: var(--dark);
     transition: 0.3s;
 }

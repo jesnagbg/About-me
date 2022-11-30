@@ -30,6 +30,7 @@ a {
     color: inherit;
 }
 
+/* Only there to link to the very top */
 #top-page {
     position: absolute;
     top:0;
@@ -64,11 +65,11 @@ main {
     display: flex;
 }
 
-.center-items {
+.center-x {
     align-items: center;
 }
 
-.center-content {
+.center-y {
     justify-content: center;
 }
 

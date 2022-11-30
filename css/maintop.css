@@ -13,13 +13,6 @@
 
 /* Top Main styling */
 
-.profile-pic {
-    height: 150px;
-    object-fit: cover;
-    transform: scaleX(-1);
-    margin-top: 1rem;
-}
-
 fieldset {
     border: 1px solid transparent;
     border-top-color: var(--lightgrey);
@@ -33,6 +26,13 @@ legend {
     white-space: nowrap
 }
 
+.profile-pic {
+    height: 150px;
+    object-fit: cover;
+    transform: scaleX(-1);
+    margin-top: 1rem;
+}
+
 .small-shown {
     display: block;
 }
@@ -40,7 +40,6 @@ legend {
 .big-shown {
     display: none;
 }
-
 
 h1 {
     font-size: 25px;
@@ -55,12 +54,11 @@ h1 {
     color: inherit;
     cursor: pointer;
     /* transition: all; */
-
 }
 
-.down-button:hover {
+/* .down-button:hover {
     border: 1px solid var(--lightgrey);
-}
+} */
 
 /* Tablet */
 

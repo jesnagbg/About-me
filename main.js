@@ -33,40 +33,14 @@ function toggleTheme(event) {
 }
 
 
-//Stupid button fix
-
 function listenPageButton() {
-    const button = document.getElementById('scroll-down');
-
-    button.onclick = changeButtonDirection;
+    const button = document.getElementById('scroll-to-skills')
+    button.addEventListener('click', scrollDown)
 }
 
-function changeButtonDirection() {
-    const buttonIcon = document.getElementById('button-icon');
-    const buttonLink = document.getElementById('scroll-down');
-    let buttonHref = buttonLink.getAttribute("href");
-
-    if (buttonHref === "#skills") {
-        buttonLink.setAttribute('href', '#top-page');
-        removeClasses();
-        buttonIcon.classList.add('fa-solid', 'fa-angles-down', 'linked-logo');
-        console.log("hi")
-    } else if (buttonHref === "#top-page") {
-        buttonLink.setAttribute('href', '#skills');
-        removeClasses();
-        buttonIcon.classList.add('fa-solid', 'fa-angles-up', 'linked-logo');
-        console.log("no")
-    } else {
-        buttonLink.setAttribute('href', '#skills');
-        removeClasses();
-        buttonIcon.classList.add('fa-solid', 'fa-angles-up', 'linked-logo');
-        console.log('hej')
-    }
-}
-
-function removeClasses() {
-    const buttonIcon = document.getElementById('button-icon');
-    buttonIcon.classList = "";
+function scrollDown(event) {
+    const skills = document.getElementById('skills')
+    skills.scrollIntoView({ behavior: 'smooth' })
 }
 
 

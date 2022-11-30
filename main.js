@@ -2,12 +2,12 @@ window.addEventListener('DOMContentLoaded', main);
 
 function main() {
     addEventListeners();
-    typeOutAboutMe();
+    //typeOutAboutMe();
 }
 
 function addEventListeners() {
     listenCheckbox();
-
+    changePageButton();
 }
 
 function listenCheckbox() {
@@ -28,16 +28,21 @@ function toggleTheme(event) {
     }
 }
 
-function typeOutAboutMe() {
-    let i = O;
-    const text = "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque saepe vel odio veniam, assumenda!";
-    const speed = 50;
+function changePageButton() {
+    const button = document.getElementById('scroll-to-skills');
 
-    if (i < text.length) {
-        document.getElementById('about-me').innerHTML += text.charAt(i);
-        i++;
-        setTimeout(typeOutAboutMe, speed);
-    }
-    
+    button.addEventListener('click', turnButtonUp);
 }
+
+function turnButtonUp() {
+    const buttonLink = document.getElementById('scroll-down')
+    
+    if (buttonLink.href === "#skills") {
+        buttonLink.href = "#start-page";
+    } else {
+        buttonLink.href = "#skills";
+    }
+}
+
+
 

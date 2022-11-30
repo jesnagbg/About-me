@@ -10,14 +10,13 @@ function addEventListeners() {
     listenPageButton();
 }
 
-
 function listenCheckbox() {
     const checkbox = document.getElementById('checkbox');
     checkbox.addEventListener('change', toggleTheme);
 }
 
 /**
- * 
+ * When the user clicks on the checkbox it changes to lightmode/darkmode.
  * @param {change} event 
  */
 function toggleTheme(event) {

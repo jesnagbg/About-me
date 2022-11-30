@@ -7,7 +7,7 @@ function main() {
 
 function addEventListeners() {
     listenCheckbox();
-    changePageButton();
+    listenPageButton();
 }
 
 function listenCheckbox() {
@@ -28,18 +28,19 @@ function toggleTheme(event) {
     }
 }
 
-function changePageButton() {
+function listenPageButton() {
     const button = document.getElementById('scroll-to-skills');
 
-    button.addEventListener('click', turnButtonUp);
+    //button.addEventListener('click', changeButtonDirection);
+    button.onclick = changeButtonDirection;
 }
 
-function turnButtonUp() {    
+function changeButtonDirection() {    
     const buttonLink = document.getElementById('scroll-down');
     let buttonHref = buttonLink.getAttribute("href");
 
     if (buttonHref === "#skills") {
-        buttonLink.setAttribute('href', '#start-page');
+        buttonLink.setAttribute('href', '#top-page');
         console.log("hi")
     } else {
         buttonLink.setAttribute('href', '#skills');

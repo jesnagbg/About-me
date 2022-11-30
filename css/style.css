@@ -1,12 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@600&display=swap');
 
 :root {
-    --light: #e9ecf0;
     --extralight: #f0f3f7;
-    --dark: #33333d;
-    --pink: #cfafaf;
-    --midgrey: #656577;
+    --light: #e9ecf0;
     --lightgrey: #5b5c62;
+    --midgrey: #656577;
+    --dark: #33333d;
     --header-height: 4rem;
 }
 
@@ -15,18 +14,12 @@
 }
 
 body {
-    /* height: 300rem; */
     font-family: 'Crimson Text', serif;
     font-size: 16px;
     background: var(--extralight);
     color: var(--dark);
     transition: background 0.2s linear;
 }
-
-/* .light {
-    background-color: var(--extralight);
-    color: var(--dark);
-} */
 
 .dark {
     background-color: var(--midgrey);
@@ -35,6 +28,12 @@ body {
 
 a {
     color: inherit;
+}
+
+#top-page {
+    position: absolute;
+    top:0;
+    left:0;
 }
 
 /* Main */
@@ -49,12 +48,16 @@ main {
     margin: 0;
 }
 
-.m16-bot {
+.p0 {
+    padding: 0;
+}
+
+.m16px-bot {
     margin-bottom: 16px;
 }
 
-.p0 {
-    padding: 0;
+.m1-bot {
+    margin-bottom: 1rem;
 }
 
 .flex {
@@ -78,9 +81,6 @@ main {
     margin-right: 1rem;
 }
 
-.m1-bot {
-    margin-bottom: 1rem;
-}
 
 
 /* Tablet */

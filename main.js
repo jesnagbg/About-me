@@ -34,13 +34,16 @@ function changePageButton() {
     button.addEventListener('click', turnButtonUp);
 }
 
-function turnButtonUp() {
-    const buttonLink = document.getElementById('scroll-down')
-    
-    if (buttonLink.href === "#skills") {
-        buttonLink.href = "#start-page";
+function turnButtonUp() {    
+    const buttonLink = document.getElementById('scroll-down');
+    let buttonHref = buttonLink.getAttribute("href");
+
+    if (buttonHref === "#skills") {
+        buttonLink.setAttribute('href', '#start-page');
+        console.log("hi")
     } else {
-        buttonLink.href = "#skills";
+        buttonLink.setAttribute('href', '#skills');
+        console.log("no")
     }
 }
 

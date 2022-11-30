@@ -41,8 +41,3 @@ function typeOutAboutMe() {
     
 }
 
-//function scrollToSkills() {
-//    const skillsButton = document.getElementById('scroll-to-skills');
-//
-//    skillsButton.addEventListener('click', )
-//}

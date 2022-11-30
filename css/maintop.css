@@ -83,8 +83,8 @@ h1 {
     /* Main Top */
     
     .main-top {
-        margin-top: calc(var(--header-height) + 1rem);
-        margin-bottom: calc(var(--header-height) + 2rem);
+        margin-top: var(--header-height);
+        margin-bottom: calc(var(--header-height) + 1rem);
     }
     
     legend {

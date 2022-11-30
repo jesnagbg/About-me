@@ -102,9 +102,13 @@
 @media (min-width: 1024px) {
 
     .main-mid {
-        margin-top: 4rem;
+        margin-top: 0;
         margin-left: 5rem;
         margin-right: 5rem;
+    }
+
+    .my-skills {
+        margin-top: 4rem;
     }
     
     /* .my-skills {

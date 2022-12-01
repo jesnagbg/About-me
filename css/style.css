@@ -82,6 +82,18 @@ main {
     margin-right: 1rem;
 }
 
+.hidden {
+    visibility: hidden;
+}
+
+.fade-in {
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
 
 
 /* Tablet */

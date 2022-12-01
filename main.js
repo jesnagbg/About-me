@@ -59,10 +59,11 @@ function scrollDown(event) {
 }
 
 /**
- * Checks if #skills is inside the viewport (50%). If it is then it is shown and faded in.
+ * Checks if #skills is inside the viewport (20%). If it is then it is shown and faded in.
  */
 function detectSkillsVisibility() {
     const skillsContainer = document.getElementById('skills');
+    
     const observer = new window.IntersectionObserver(([entry]) => {
         if (entry.isIntersecting) {
             removeHiddenOnSkills();
@@ -73,7 +74,7 @@ function detectSkillsVisibility() {
         applyHiddenOnSkills();
     }, {
         root: null,
-        threshold: 0.5,
+        threshold: 0.2,
     })
 
     observer.observe(skillsContainer);

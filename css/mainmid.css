@@ -21,6 +21,10 @@
     white-space: nowrap;
 }
 
+.also-skill {
+    display: none;
+}
+
 .html-pad {
     padding-left: 4px;
     padding-right: 4px;
@@ -77,10 +81,9 @@
 
 /* Tablet */
 
-@media (min-width: 650px) {
-
+@media (min-width: 685px) {
     .main-mid {
-        margin-top: 1rem;
+        /* margin-top: 1rem; */
         margin-bottom: 2rem;
     }
     
@@ -88,6 +91,10 @@
         flex-direction: row;
     }
     
+    /* li {
+        min-width: 120px;
+    } */
+
     .letter {
         line-height: 0.05;
     }
@@ -107,6 +114,7 @@
         margin-right: 5rem;
     }
 
+
     .my-skills {
         margin-top: 4rem;
     }
@@ -123,11 +131,12 @@
         margin: 1rem;
         padding: 0.1rem 2rem;
     }
+
     
     .letter {
         line-height: 0.02;
     }
-
+    
     .js-pad {
         padding-left: 3.5px;
         padding-right: 3.5px;
@@ -136,11 +145,24 @@
     .coffee-pad {
         padding-left: 2.5px;
         padding-right: 2.5px;
-
+        
     }
 }
 
 @media (min-width: 1600px) {
+    
+    li {
+        width: 184px;
+    }
+
+    li:hover .skill {
+        display: none;
+    }
+    
+    li:hover .also-skill {
+        display: inline;
+    }
+
     .about-me {
         max-width: 1500px;
         margin: 1rem;

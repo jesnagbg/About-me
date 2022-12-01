@@ -3,8 +3,7 @@ window.addEventListener('DOMContentLoaded', main);
 function main() {
     addEventListeners();
     //typeOutAboutMe();
-    detectSkillsVisibility();
-    detectWorkVisibility();
+    detectVisibility();
 }
 
 function addEventListeners() {
@@ -23,7 +22,7 @@ function listenCheckbox() {
 //Help
 /**
  * When the user clicks on the checkbox it changes to lightmode/darkmode.
- * @param {change} event 
+ * @param {MouseEvent} event 
  */
 function toggleTheme(event) {
     const body = document.querySelector('body');
@@ -41,7 +40,7 @@ function toggleTheme(event) {
 //Help
 /**
  * Listens to see if a button gets clicked. If clicked runs the function scrollDown.
- * @param {click} event 
+ * @param {ClickEvent} event 
  */
 function listenPageButton(event) {
     const button = document.getElementById('scroll-to-skills')
@@ -50,8 +49,8 @@ function listenPageButton(event) {
 
 //Help
 /**
- * Scrolls down to the element 'skills' comes into view.
- * @param {click} event 
+ * Scrolls down to #skills.
+ * @param {Event} event 
  */
 function scrollDown(event) {
     const skills = document.getElementById('skills')
@@ -59,84 +58,28 @@ function scrollDown(event) {
 }
 
 /**
- * Checks if #skills is inside the viewport (20%). If it is then it is shown and faded in.
+ * Checks if an element is inside the viewport (10%). If it is then it is shown and faded in.
  */
-function detectSkillsVisibility() {
-    const skillsContainer = document.getElementById('skills');
-
-    const observer = new window.IntersectionObserver(([entry]) => {
-        if (entry.isIntersecting) {
-            removeHiddenOnSkills();
-            console.log('enter mid');
-            return;
+function detectVisibility() {
+    const observer = new IntersectionObserver((entries) => {
+        for (const entry of entries) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fade-in', entry.isIntersecting);
+                //entry.target.classList.toggle('hidden', entry.isIntersecting);
+                console.log('enter bottom');
+                return;
+            }
+            entry.target.classList.remove('fade-in', entry.isIntersecting);
+            console.log('leave bottom');
         }
-        console.log('leave mid');
-        applyHiddenOnSkills();
     }, {
-        root: null,
-        threshold: 0.2,
-    })
-
-    observer.observe(skillsContainer);
-}
-
-/**
- * Applies .hidden and removes .fade-in to #skills
- */
-function applyHiddenOnSkills() {
-    const skillsContainer = document.getElementById('skills');
-    
-    skillsContainer.classList.add('hidden');
-    skillsContainer?.classList.remove('fade-in');
-}
-
-/**
- * Removes .hidden and applies .fade-in to #skills
- */
-function removeHiddenOnSkills() {
-    const skillsContainer = document.getElementById('skills');
-    
-    skillsContainer?.classList.remove('hidden');
-    skillsContainer.classList.add('fade-in');
-}
-
-/**
- * Checks if #bottom-page is inside the viewport (10%). If it is then it is shown and faded in.
- */
-function detectWorkVisibility() {
-    const workSection = document.getElementById('bottom-page');
-    const observer = new window.IntersectionObserver(([entry]) => {
-        if (entry.isIntersecting) {
-            removeHiddenOnWork();
-            console.log('enter bottom');
-            return;
-        }
-        console.log('leave bottom');
-        applyHiddenOnWork();
-    }, {
-        root: null,
         threshold: 0.1,
     })
 
+    const workSection = document.getElementById('bottom-page');
+    const skillsSection = document.getElementById('skills');
+  
     observer.observe(workSection);
-}
-
-/**
- * Applies .hidden and removes .fade-in to #bottom-page
- */
-function applyHiddenOnWork() {
-    const bottomContainer = document.getElementById('bottom-page');
-
-    bottomContainer.classList.add('hidden');
-    bottomContainer?.classList.remove('fade-in');
-}
-
-/**
- * Removes .hidden and applies .fade-in to #bottom-page
- */
-function removeHiddenOnWork() {
-    const bottomContainer = document.getElementById('bottom-page');
-
-    bottomContainer?.classList.remove('hidden');
-    bottomContainer.classList.add('fade-in');
+    observer.observe(skillsSection);
+ 
 }

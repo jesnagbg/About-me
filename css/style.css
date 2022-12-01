@@ -9,9 +9,9 @@
     --header-height: 4rem;
 }
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
     display: none;
-}
+} */
 
 body {
     font-family: 'Crimson Text', serif;
@@ -83,22 +83,25 @@ main {
 }
 
 .hidden {
-    visibility: hidden;
+    opacity: 0;
 }
 
 .fade-in {
-    animation: fadeIn 1.5s;
+    opacity: 1;
+    transition: opacity 1.5s;
 }
 
-@keyframes fadeIn {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
+@media (min-width: 390px) {
+    main {
+        margin-left: 1rem;
+        margin-right: 1rem;
 }
+    }
 
 
 /* Tablet */
 
-@media (min-width: 650px) {
+@media (min-width: 670px) {
     
     body {
         font-size: 18px;

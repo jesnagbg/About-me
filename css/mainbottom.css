@@ -38,7 +38,7 @@
 
 /* Tablet */
 
-@media (min-width: 650px) {
+@media (min-width: 670px) {
     .work-container {
         flex-direction: row;
     }

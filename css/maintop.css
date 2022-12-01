@@ -62,7 +62,7 @@ h1 {
 
 /* Tablet */
 
-@media (min-width: 650px) {
+@media (min-width: 670px) {
     .main-top {
         margin-top: var(--header-height);
         margin-left: 5rem;

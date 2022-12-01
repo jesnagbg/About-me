@@ -65,10 +65,8 @@ input:checked~.slider::before {
     box-shadow: none;
 }
 
-/* Desktop */
+@media (min-width: 670px) {
 
-@media (min-width: 1024px) {
-        
     .header-icons {
         margin-left: 3rem;
     }
@@ -76,4 +74,12 @@ input:checked~.slider::before {
     .toggle-switch {
         margin-right: 3rem;
     }
+
+}
+
+/* Desktop */
+
+@media (min-width: 1024px) {
+        
+    
 }

@@ -51,7 +51,7 @@ function listenPageButton(event) {
 //Help
 /**
  * Scrolls down to the element 'skills' comes into view.
- * @param {scroll} event 
+ * @param {click} event 
  */
 function scrollDown(event) {
     const skills = document.getElementById('skills')
@@ -63,7 +63,7 @@ function scrollDown(event) {
  */
 function detectSkillsVisibility() {
     const skillsContainer = document.getElementById('skills');
-    
+
     const observer = new window.IntersectionObserver(([entry]) => {
         if (entry.isIntersecting) {
             removeHiddenOnSkills();

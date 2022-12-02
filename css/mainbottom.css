@@ -1,39 +1,31 @@
-/* Main Bot */
-
 .all-work-container {
-    /* flex-direction: column; */
     flex-wrap: wrap;
 }
 
 .work-container {
-    /* margin-top: var(--header-height);
-    margin-bottom: var(--header-height); */
     flex-direction: column;
 }
 
 .git-portfolio-img {
     max-width: 100%;
-    /* width: 250px; */
     object-fit: cover;
     border: 1px solid var(--lightgrey);
-    filter: grayscale(60%);
+    filter: grayscale(100%);
 }
 
 .git-portfolio-img:hover {
     filter: grayscale(0);
 }
 
+/* Large phone/small tablet */
+
 @media (min-width: 430px) {
 
-    .main-bot {
-        margin-top: 1rem;
-        margin-bottom: 2rem;
-    }
-
+    
     .git-portfolio-img {
         width: 345px;
     }
-
+    
 }
 
 /* Tablet */
@@ -44,18 +36,11 @@
     }
 }
 
-/* Desktop */
-
-@media (min-width: 1024px) {
-
-    
-    
-}
-
 /* Large desktop */
 
-/* @media (min-width: 1600px) {
-    .all-work-container {
-        flex-direction: row;
+@media (min-width: 1400px) {
+    
+    .main-bot {
+        margin-bottom: 2rem;
     }
-} */
+}

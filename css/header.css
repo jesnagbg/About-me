@@ -65,6 +65,8 @@ input:checked ~ .slider:before {
     box-shadow: none;
 }
 
+/* Tablet */
+
 @media (min-width: 670px) {
 
     .header-icons {
@@ -75,11 +77,4 @@ input:checked ~ .slider:before {
         margin-right: 3rem;
     }
 
-}
-
-/* Desktop */
-
-@media (min-width: 1024px) {
-        
-    
 }

@@ -46,7 +46,9 @@
 
 .about-me {
     padding: 0.1rem 2rem;
+    text-align: center;
 }
+
 
 /* Bouncy i */
 
@@ -65,7 +67,7 @@
     from {
         transform: translate3d(0, -13px, 0);
     }
-
+    
     to {
         transform: translate3d(0, -20px, 0);
     }
@@ -74,10 +76,6 @@
 /* Tablet */
 
 @media (min-width: 685px) {
-    .main-mid {
-        /* margin-top: 1rem; */
-        margin-bottom: 2rem;
-    }
     
     .skill-list {
         flex-direction: row;
@@ -86,27 +84,31 @@
     /* li {
         min-width: 120px;
     } */
-
+    
     .letter {
         line-height: 0.05;
     }
-
+    
     .about-me {
         padding: 0.1rem 2rem;
+    }
+
+    .no-wrap-text {
+        white-space: nowrap;
     }
 }
 
 /* Desktop */
 
 @media (min-width: 1024px) {
-
+    
     .main-mid {
         margin-top: 0;
         margin-left: 5rem;
         margin-right: 5rem;
     }
-
-
+    
+    
     .my-skills {
         margin-top: 4rem;
     }
@@ -115,7 +117,7 @@
         margin: 1rem;
         padding: 0.1rem 2rem;
     }
-
+    
     
     .letter {
         line-height: 0.02;
@@ -125,7 +127,7 @@
         padding-left: 3.5px;
         padding-right: 3.5px;
     }
-
+    
     .coffee-pad {
         padding-left: 2.5px;
         padding-right: 2.5px;

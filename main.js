@@ -1,11 +1,16 @@
 window.addEventListener('DOMContentLoaded', main);
 
+/**
+ * Program start.
+ */
 function main() {
     addEventListeners();
-    //typeOutAboutMe();
     detectVisibility();
 }
 
+/**
+ * Listens for user interaction.
+ */
 function addEventListeners() {
     listenCheckbox();
     listenPageButton();
@@ -65,7 +70,6 @@ function detectVisibility() {
         for (const entry of entries) {
             if (entry.isIntersecting) {
                 entry.target.classList.add('fade-in', entry.isIntersecting);
-                //entry.target.classList.toggle('hidden', entry.isIntersecting);
                 console.log('enter bottom');
                 return;
             }

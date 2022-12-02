@@ -9,9 +9,9 @@
     --header-height: 4rem;
 }
 
-/* ::-webkit-scrollbar {
+::-webkit-scrollbar {
     display: none;
-} */
+}
 
 body {
     font-family: 'Crimson Text', serif;
@@ -91,6 +91,8 @@ main {
     transition: opacity 1.5s;
 }
 
+/* Slightly larger phone */
+
 @media (min-width: 390px) {
     main {
         margin-left: 1rem;
@@ -124,7 +126,6 @@ main {
     .spread {
         justify-content: center;
     }
-
     
 }
 

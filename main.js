@@ -26,7 +26,7 @@ function listenCheckbox() {
 
 //Help
 /**
- * When the user clicks on the checkbox it changes to lightmode/darkmode.
+ * When the user clicks on the checkbox it changes to lightmode/darkmode by applying/removing the css-class dark.
  * @param {MouseEvent} event 
  */
 function toggleTheme(event) {
@@ -54,7 +54,7 @@ function listenPageButton(event) {
 
 //Help
 /**
- * Scrolls down to #skills.
+ * Scrolls down to #skills in a smooth way.
  * @param {Event} event 
  */
 function scrollDown(event) {
@@ -63,7 +63,7 @@ function scrollDown(event) {
 }
 
 /**
- * Checks if an element is inside the viewport (10%). If it is then it is shown and faded in.
+ * Checks if an element is inside the viewport (10%). If it is then it is shown and faded in, by applying a css-class to it.
  */
 function detectVisibility() {
     const observer = new IntersectionObserver((entries) => {

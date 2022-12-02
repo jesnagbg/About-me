@@ -9,9 +9,9 @@
     --header-height: 4rem;
 }
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
     display: none;
-}
+} */
 
 body {
     font-family: 'Crimson Text', serif;

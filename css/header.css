@@ -13,11 +13,13 @@ header {
     font-size: 35px;
 }
 
+
 /* Toggle switch */
 
 .toggle-switch {
     position: relative;
     width: 100px;
+    margin-right: 1rem;
 }
 
 label {
@@ -68,7 +70,7 @@ input:checked ~ .slider:before {
 /* Tablet */
 
 @media (min-width: 670px) {
-
+    
     .header-icons {
         margin-left: 3rem;
     }
